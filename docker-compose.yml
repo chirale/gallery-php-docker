@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  db:
+    image: mariadb:10
+    volumes:
+      - ./database/initdb.d:/docker-entrypoint-initdb.d
+    restart: always
+    env_file: .env
+    environment:
+      MYSQL_HOST: db
+  gallery:
+    image: bwdutton/gallery3:beta
+    env_file: .env
+    environment:
+      MYSQL_HOST: db
+    restart: always
+    ports:
+      - "8441:80"
+    depends_on:
+      - db
+    volumes:
+      - ./gallery-var:/var/www/var

@@ -1,0 +1,4 @@
+local/
+database/initdb.d/*
+gallery-var/*
+.env
