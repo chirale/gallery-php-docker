@@ -8,7 +8,7 @@ A docker compose for Gallery PHP project on gallery3-docker creating:
 ```bash
 mkdir myproject
 cd myproject
-git clone git@github.com:chirale/gallery-php-docker.git
+git clone https://github.com/chirale/gallery-php-docker.git
 ```
 
 ## Create .env
