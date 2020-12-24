@@ -43,6 +43,15 @@ and last:
 docker-compose start
 ```
 
+## Load database from previous install
+
+```bash
+mkdir database/initdb.d
+cp path/to/my/dump.sql database/initdb.d/init.db
+```
+
+then do the steps above but do not install gallery (already in db).
+
 ## Install
 
 ```bash
