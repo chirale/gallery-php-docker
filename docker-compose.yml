@@ -10,7 +10,7 @@ services:
     environment:
       MYSQL_HOST: db
   gallery:
-    image: bwdutton/gallery3:beta
+    image: bwdutton/gallery3:latest
     env_file: .env
     environment:
       MYSQL_HOST: db
